@@ -1,6 +1,13 @@
 # History
 ---
 
+## Commit #3 - Rename SampleScene to MainScene
+---
+* Renamed:
+    - SampleScene.unity to MainScene.unity
+    - SampleScene.unity.meta to MainScene.unity.meta
+---
+
 ## Commit #2 - Spider, Web and Background
 ---
 * Added: 
