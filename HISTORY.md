@@ -1,6 +1,16 @@
 # History
 ---
 
+## Commit #4 - Movement
+---
+* Added: 
+    - Script (Movement) that with help of the Spawn script moves the Webs and Background Walls, creating the illusion of the Spider climbing the wall.
+* Edited:
+    - Number of Webs controlled by Web Controller: 10 --> 12
+    - Spawn point of Webs: -4.5 --> -6.5
+    - Spawn point of Background Walls: 0 --> -12
+--- 
+
 ## Commit #3 - Rename SampleScene to MainScene
 ---
 * Renamed:

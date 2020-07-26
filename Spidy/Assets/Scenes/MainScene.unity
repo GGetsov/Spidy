@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 434175805}
   - component: {fileID: 434175807}
   - component: {fileID: 434175808}
+  - component: {fileID: 434175806}
   m_Layer: 0
   m_Name: Web Controler
   m_TagString: Untagged
@@ -236,6 +237,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &434175806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434175804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9b8e794239d1d499a79aa43fc98dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: {x: 0, y: -1, z: 0}
+  acceleration: {x: 0, y: -0.2, z: 0}
 --- !u!114 &434175807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,6 +274,8 @@ MonoBehaviour:
   - {fileID: 6036908504245651493, guid: 23c61b2879a735d45b5cf49b48792bcd, type: 3}
   - {fileID: 6036908504245651493, guid: 23c61b2879a735d45b5cf49b48792bcd, type: 3}
   - {fileID: 6036908504245651493, guid: 23c61b2879a735d45b5cf49b48792bcd, type: 3}
+  - {fileID: 6036908504245651493, guid: 23c61b2879a735d45b5cf49b48792bcd, type: 3}
+  - {fileID: 6036908504245651493, guid: 23c61b2879a735d45b5cf49b48792bcd, type: 3}
 --- !u!114 &434175808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e359bd8c5b65ccf44887b5ebed1b1ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: {x: 0, y: -4.5, z: 0}
+  SpawnPoint: {x: 0, y: -6.5, z: 0}
   ySizeOfATile: 1
 --- !u!1 &1313943060
 GameObject:
@@ -285,6 +302,7 @@ GameObject:
   - component: {fileID: 1313943062}
   - component: {fileID: 1313943061}
   - component: {fileID: 1313943065}
+  - component: {fileID: 1313943064}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -333,6 +351,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1313943064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313943060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9b8e794239d1d499a79aa43fc98dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: {x: 0, y: -1, z: 0}
+  acceleration: {x: 0, y: -0.2, z: 0}
 --- !u!114 &1313943065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e359bd8c5b65ccf44887b5ebed1b1ea2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnPoint: {x: 0, y: 0, z: 0}
+  SpawnPoint: {x: 0, y: -12, z: 0}
   ySizeOfATile: 14
 --- !u!1001 &4495277983639801024
 PrefabInstance:
