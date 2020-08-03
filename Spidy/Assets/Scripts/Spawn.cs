@@ -1,7 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
+    public event EventHandler<OnRespawnArgs> OnRespawn;
+    public class OnRespawnArgs : EventArgs
+    {
+        public Transform webTransform;
+    }
     GameObject[] spawnees;
     [SerializeField] Vector3 SpawnPoint;
     [SerializeField] int ySizeOfATile;
@@ -26,6 +32,7 @@ public class Spawn : MonoBehaviour
         if (IfLowestObjectIsTooLow())
         {
             MoveItOnTopOfTheObjectBeforeThat();
+            if (OnRespawn != null) OnRespawn(this, new OnRespawnArgs {webTransform = spawnees[indexOfObjectBeingChecked].transform});
             indexOfObjectBeingChecked = ChangeToNextIndexInArray(indexOfObjectBeingChecked);
             indexOfPreviousObject = ChangeToNextIndexInArray(indexOfPreviousObject);
         }
@@ -40,7 +47,7 @@ public class Spawn : MonoBehaviour
 
     private void MoveItOnTopOfTheObjectBeforeThat()
     {
-        spawnees[indexOfObjectBeingChecked].transform.position = spawnees[indexOfPreviousObject].transform.position + new Vector3(0, ySizeOfATile, 0);
+        spawnees[indexOfObjectBeingChecked].transform.position = new Vector3(0,spawnees[indexOfPreviousObject].transform.position.y + ySizeOfATile, 0);
     }
 
     private bool IfLowestObjectIsTooLow()

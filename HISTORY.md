@@ -1,6 +1,14 @@
 # History
 ---
 
+## Commit #5 - Random Web Respawn (Left or Right from center)
+---
+* Added: 
+    - Script (LeftOrRight) that with help of the Spawn script respawns the Webs left or right from center randomly.
+* Edited:
+    - Spawn - added event OnRespawn that calls the function to respawn randomly left or right from center. 
+--- - Spawn - added OnRespawnArgs class
+
 ## Commit #4 - Movement
 ---
 * Added: 
