@@ -217,6 +217,8 @@ GameObject:
   - component: {fileID: 434175808}
   - component: {fileID: 434175806}
   - component: {fileID: 434175809}
+  - component: {fileID: 434175810}
+  - component: {fileID: 434175811}
   m_Layer: 0
   m_Name: Web Controler
   m_TagString: Untagged
@@ -301,6 +303,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c51bb1a418bbcc6428fc859a0dfaeac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &434175810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434175804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3c8238c70d16e4a8076b849d486ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &434175811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434175804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c743002a28afa458f64557afef086a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1313943060

@@ -1,13 +1,25 @@
 # History
 ---
 
+## Commit #6 - Player Controlled Webs
+---
+* Added: 
+    - Script (WebInputController) that accepts input ('A' and 'D') and executes events.
+    - GetKeyDownArgs class inside WebInputController.
+    - Script (YAxisMover) that move Webs along the Y axis (1 block left or right) after input via the WebInputController events.
+* Edited:
+    - LeftOrRight - rearranged function order for better readability. 
+    - HISTORY.md - fixed typos.
+---
+
 ## Commit #5 - Random Web Respawn (Left or Right from center)
 ---
 * Added: 
     - Script (LeftOrRight) that with help of the Spawn script respawns the Webs left or right from center randomly.
 * Edited:
     - Spawn - added event OnRespawn that calls the function to respawn randomly left or right from center. 
---- - Spawn - added OnRespawnArgs class
+    - Spawn - added OnRespawnArgs class inside Spawn. 
+---
 
 ## Commit #4 - Movement
 ---

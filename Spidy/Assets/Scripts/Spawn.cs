@@ -4,6 +4,7 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public event EventHandler<OnRespawnArgs> OnRespawn;
+ 
     public class OnRespawnArgs : EventArgs
     {
         public Transform webTransform;
