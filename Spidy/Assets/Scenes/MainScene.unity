@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 434175809}
   - component: {fileID: 434175810}
   - component: {fileID: 434175811}
+  - component: {fileID: 434175812}
   m_Layer: 0
   m_Name: Web Controler
   m_TagString: Untagged
@@ -329,6 +330,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c743002a28afa458f64557afef086a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &434175812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434175804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9abf950e6a1aa484bb54e1190d12e58b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementScriptHolders:
+  - {fileID: 434175804}
+  - {fileID: 1313943060}
 --- !u!1 &1313943060
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,12 @@
 # History
 ---
 
+## Commit #7 - Lose Condition
+---
+* Added: 
+    - Script (LoseConditionChecker) that checks if the Spider has walked over empty space (without a Web) and disables movement if has.
+---
+
 ## Commit #6 - Player Controlled Webs
 ---
 * Added: 
