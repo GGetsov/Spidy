@@ -1,31 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LoseConditionChecker : MonoBehaviour
 {
-    GameObject[] Webs;
     int IndexOfCheckedWeb = 0;
+    GameObject[] Webs;
     [SerializeField] GameObject[] MovementScriptHolders;
+    [SerializeField] UnityEvent OnLoss;
 
     void Start()
     {
         Webs = GetComponent<IControlledObjects>().GetControlledObjects();
+        YAxisMover webMover = GetComponent<YAxisMover>();
+        webMover.OnWrongMove += KillMovement;
     }
 
     void Update()
     {
-        if (Webs[IndexOfCheckedWeb].transform.position.y < -3.5 )
+        bool webIsOnLevelWithSpider = Webs[IndexOfCheckedWeb].transform.position.y < -3.5;
+        bool webIsToTheSideOfSpider = Webs[IndexOfCheckedWeb].transform.position.x != 0;
+        if (webIsOnLevelWithSpider)
         {
-            if (Webs[IndexOfCheckedWeb].transform.position.x != 0 ) 
+            if (webIsToTheSideOfSpider)
             {
-                foreach (GameObject movedObject in MovementScriptHolders)
-                {
-                    movedObject.GetComponent<Movement>().enabled = false;
-                }
-            }   
-
+                KillMovement();
+                OnLoss?.Invoke();
+            }
             IndexOfCheckedWeb = ++IndexOfCheckedWeb % Webs.Length;
         }
     }
+
+    void KillMovement()
+    {
+        foreach (GameObject movedObject in MovementScriptHolders)
+            {
+                movedObject.GetComponent<Movement>().enabled = false;
+            }
+    }
+    
 }
+
+    

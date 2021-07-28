@@ -3,21 +3,39 @@ using UnityEngine;
 
 public class YAxisMover : MonoBehaviour
 {
+    public event Action OnCorrectMove;
+    public event Action OnWrongMove;
+
+    int indexOfWeb;
     GameObject[] Webs;
-    int indexOfWeb = 0;
+    WebInputController webController;
 
     void Start()
     {
+        indexOfWeb = 0; 
         Webs = GetComponent<IControlledObjects>().GetControlledObjects();
-        WebInputController webController = GetComponent<WebInputController>();
+        webController = GetComponent<WebInputController>();
         webController.OnButtonPress += MoveAlongYAxis;
+        OnWrongMove += DisableFurtherMovement;
+   }
+
+    void MoveAlongYAxis (int direction) 
+    {
+        Webs[indexOfWeb].transform.position += new Vector3(direction,0,0);
+        if (Webs[indexOfWeb].transform.position.x == 0)
+        {
+            OnCorrectMove?.Invoke();
+            indexOfWeb = (indexOfWeb + 1) % Webs.Length;
+        } 
+        else OnWrongMove?.Invoke(); 
+        
     }
 
-    void MoveAlongYAxis (object sender, WebInputController.GetKeyDownArgs e) 
+    public void DisableFurtherMovement()
     {
-        Vector3 newPosition = new Vector3 (Webs[indexOfWeb].transform.position.x + e.MoveLeftOrRight,Webs[indexOfWeb].transform.position.y,0);
-        Webs[indexOfWeb].transform.position = newPosition;  
-        indexOfWeb = (indexOfWeb + 1) % Webs.Length;
+        webController.OnButtonPress -= MoveAlongYAxis;
     }
+ 
+    
 
 }

@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class WebInputController : MonoBehaviour
 {
-    public event EventHandler<GetKeyDownArgs> OnButtonPress;
-    public class GetKeyDownArgs : EventArgs
-    {
-        public int MoveLeftOrRight;
-    }
+    public Action<int> OnButtonPress; 
+
     void Update()
     {
-        if ( Input.GetKeyDown(KeyCode.A)) if (OnButtonPress != null) OnButtonPress(this, new GetKeyDownArgs {MoveLeftOrRight = 1});
-        
-        if ( Input.GetKeyDown(KeyCode.D)) if (OnButtonPress != null) OnButtonPress(this, new GetKeyDownArgs {MoveLeftOrRight = -1});
-    
+        MoveOnButtonPress(KeyCode.A, 1);
+        MoveOnButtonPress(KeyCode.D, -1);
+    }
+    void MoveOnButtonPress(KeyCode button, int leftOrRight)
+    {
+        if (Input.GetKeyDown(button)) 
+        OnButtonPress?.Invoke(leftOrRight);
     }
 
 }

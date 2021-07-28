@@ -1,6 +1,17 @@
 # History
 ---
 
+## Commit #8 - Score and more 
+---
+* Added: 
+    - Script (Score) that keeps track of the score (number of webs moved correctly).
+* Edited:
+    - WebInputController - improved readability. 
+    - YAxisMover - added actions for losing on wrong move and score counting improved readability.
+    - LoseConditionChecker - added new lose condition (on wrong move) and improved readability. 
+    - Unity files after update.
+---
+
 ## Commit #7 - Lose Condition
 ---
 * Added: 
